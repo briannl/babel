@@ -1,8 +1,4 @@
-import http from 'http';
+import Contact from './Contact'
 
-http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(4477, '127.0.0.1');
-
-console.log('Server running at http://127.0.0.1:4477/');
+var brian = new Contact(1, 'Brian');
+console.log("ContactId: " + brian.contactId + "\nName: " + brian.name);
